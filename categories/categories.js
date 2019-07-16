@@ -11,7 +11,7 @@ class Categories extends DataModel {
     super();
     this.schema = {
       id: { required: true },
-      name: { required: true }
+      name: { required: true },
     };
   }
 }

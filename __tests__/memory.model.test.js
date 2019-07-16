@@ -43,7 +43,7 @@ describe('Data Model', () => {
     it('can update() a record in a model', () => {
       let obj = {
         id: record.id,
-        name: 'New Name'
+        name: 'New Name',
       };
       return model.update(record.id, obj)
         .then(updatedRecord => {
