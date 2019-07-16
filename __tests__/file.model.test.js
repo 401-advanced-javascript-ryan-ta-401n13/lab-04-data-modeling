@@ -37,17 +37,17 @@ describe('Data Model', () => {
       var testRecord = {};
       for (var field in schema) {
         switch (schema[field].type) {
-          case 'boolean':
-            testRecord[field] = faker.random.boolean();
-            break;
-          case 'number':
-            testRecord[field] = faker.random.number();
-            break;
-          case 'string':
-            testRecord[field] = faker.random.word();
-            break;
-          default:
-            null;
+        case 'boolean':
+          testRecord[field] = faker.random.boolean();
+          break;
+        case 'number':
+          testRecord[field] = faker.random.number();
+          break;
+        case 'string':
+          testRecord[field] = faker.random.word();
+          break;
+        default:
+          null;
         }
       }
       expect(model.sanitize(testRecord)).toEqual(testRecord);
@@ -59,17 +59,17 @@ describe('Data Model', () => {
       var testRecord = {};
       for (var field in schema) {
         switch (schema[field].type) {
-          case 'boolean':
-            testRecord[field] = faker.random.number();
-            break;
-          case 'number':
-            testRecord[field] = faker.random.word();
-            break;
-          case 'string':
-            testRecord[field] = faker.random.number();
-            break;
-          default:
-            null;
+        case 'boolean':
+          testRecord[field] = faker.random.number();
+          break;
+        case 'number':
+          testRecord[field] = faker.random.word();
+          break;
+        case 'string':
+          testRecord[field] = faker.random.number();
+          break;
+        default:
+          null;
         }
       }
       expect(model.sanitize(testRecord)).toEqual('Invalid Record');
