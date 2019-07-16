@@ -23,7 +23,7 @@ class People extends DataModel {
       id: { required: true, type: 'string' },
       firstName: { required: true, type: 'string' },
       lastName: { required: true, type: 'string' },
-      age: { required: true, type: 'number' }
+      age: { required: true, type: 'number' },
     };
   }
 
@@ -38,7 +38,7 @@ class People extends DataModel {
     return {
       firstName: 'Test',
       lastName: 'User',
-      age: 50
+      age: 50,
     };
   }
 }

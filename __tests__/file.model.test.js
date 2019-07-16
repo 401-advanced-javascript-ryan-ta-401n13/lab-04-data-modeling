@@ -37,17 +37,17 @@ describe('Data Model', () => {
       var testRecord = {};
       for (var field in schema) {
         switch (schema[field].type) {
-          case "boolean":
+          case 'boolean':
             testRecord[field] = faker.random.boolean();
             break;
-          case "number":
+          case 'number':
             testRecord[field] = faker.random.number();
             break;
-          case "string":
+          case 'string':
             testRecord[field] = faker.random.word();
             break;
           default:
-            null
+            null;
         }
       }
       expect(model.sanitize(testRecord)).toEqual(testRecord);
@@ -59,20 +59,20 @@ describe('Data Model', () => {
       var testRecord = {};
       for (var field in schema) {
         switch (schema[field].type) {
-          case "boolean":
+          case 'boolean':
             testRecord[field] = faker.random.number();
             break;
-          case "number":
+          case 'number':
             testRecord[field] = faker.random.word();
             break;
-          case "string":
+          case 'string':
             testRecord[field] = faker.random.number();
             break;
           default:
-            null
+            null;
         }
       }
-      expect(model.sanitize(testRecord)).toEqual("Invalid Record");
+      expect(model.sanitize(testRecord)).toEqual('Invalid Record');
     });
 
     it('sanitize() returns undefined with missing requirements', () => {
@@ -84,7 +84,7 @@ describe('Data Model', () => {
           testRecord[field] = null;
         }
       }
-      expect(model.sanitize(testRecord)).toEqual("Invalid Record");
+      expect(model.sanitize(testRecord)).toEqual('Invalid Record');
     });
 
     it('can post() a new record to a model', () => {
