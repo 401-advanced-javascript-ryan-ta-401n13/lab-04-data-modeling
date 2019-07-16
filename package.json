@@ -4,6 +4,8 @@
   "description": "",
   "main": "players-schema.js",
   "scripts": {
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
+    "lint": "eslint **/*.js",
     "test": "jest --verbose",
     "test-watch": "jest --watchAll --verbose"
   },
@@ -16,6 +18,7 @@
   "dependencies": {
     "faker": "^4.1.0",
     "jest": "^24.8.0",
+    "jsdoc": "^3.6.3",
     "uuid": "^3.3.2"
   }
 }
